@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Man vs Beast</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<section class="row log">
+    <div class="small-12 columns">
+        <h1 align="center"><span class="player-text">Man</span><span class="tiny-text"> -vs- </span><span class="beast-text">Beast</span></h1>
+    </div>
+</section>
+<div id="app">
+    <section class="row">
+        <div class="small-6 columns">
+            <h1 class="player-text text-center">YOU</h1>
+            <div class="player-healthbar">
+                <div
+                        class="player-healthbar text-center"
+                        style="background-color: green; margin: 0; color: white;"
+                        :style="{width: playerHealth + '%'}">
+                    {{ playerHealth }}%
+                </div>
+            </div>
+        </div>
+        <div class="small-6 columns">
+            <h1 class="beast-text text-center">BEAST</h1>
+            <div class="beast-healthbar">
+                <div
+                        class="beast-healthbar text-center"
+                        style="background-color: green; margin: 0; color: white;"
+                        :style="{width: beastHealth + '%'}">
+                    {{ beastHealth }}%
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="row controls" v-if="!gameIsRunning">
+        <div class="small-12 columns">
+            <button id="start-game" @click="startGame">START NEW GAME</button>
+        </div>
+    </section>
+    <section class="row controls" v-else>
+        <div class="small-12 columns">
+            <button id="attack" @click="attack">ATTACK</button>
+            <button id="special-attack" @click="specialAttack">SPECIAL ATTACK</button>
+            <button id="heal" @click="heal">HEAL</button>
+            <button id="give-up"@click="giveUp">GIVE UP</button>
+        </div>
+    </section>
+    <section class="row log" v-if="gameLog.length > 0">
+        <div class="small-12 columns">
+            <ul>
+                <li v-for="log in gameLog"
+                    :class="{'player-turn': isMan(log), 'beast-turn': isBeast(log)}">
+                   {{log.message}}
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "active_admin_comments" DISABLE TRIGGER ALL;ALTER TABLE "admin_users" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "drinks" DISABLE TRIGGER ALL;ALTER TABLE "ingredients" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (3.2ms)[0m  [1m[31mDELETE FROM "drinks";
+DELETE FROM "ingredients";
+DELETE FROM "admin_users";
+INSERT INTO "drinks" ("id", "title", "description", "steps", "source", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', 'MyString', '2019-02-27 04:01:02.053638', '2019-02-27 04:01:02.053638'), (298486374, 'MyString', 'MyString', 'MyString', 'MyString', '2019-02-27 04:01:02.053638', '2019-02-27 04:01:02.053638');
+INSERT INTO "ingredients" ("id", "drink_id", "description", "created_at", "updated_at") VALUES (980190962, 980190962, 'MyString', '2019-02-27 04:01:02.063188', '2019-02-27 04:01:02.063188'), (298486374, 298486374, 'MyString', '2019-02-27 04:01:02.063188', '2019-02-27 04:01:02.063188');
+INSERT INTO "admin_users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-02-27 04:01:02.066869', '2019-02-27 04:01:02.066869'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-02-27 04:01:02.066869', '2019-02-27 04:01:02.066869')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "active_admin_comments" DISABLE TRIGGER ALL;ALTER TABLE "admin_users" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "drinks" DISABLE TRIGGER ALL;ALTER TABLE "ingredients" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "drinks";
+DELETE FROM "ingredients";
+DELETE FROM "admin_users";
+INSERT INTO "drinks" ("id", "title", "description", "steps", "source", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', 'MyString', '2019-02-27 04:01:02.245101', '2019-02-27 04:01:02.245101'), (298486374, 'MyString', 'MyString', 'MyString', 'MyString', '2019-02-27 04:01:02.245101', '2019-02-27 04:01:02.245101');
+INSERT INTO "ingredients" ("id", "drink_id", "description", "created_at", "updated_at") VALUES (980190962, 980190962, 'MyString', '2019-02-27 04:01:02.246838', '2019-02-27 04:01:02.246838'), (298486374, 298486374, 'MyString', '2019-02-27 04:01:02.246838', '2019-02-27 04:01:02.246838');
+INSERT INTO "admin_users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-02-27 04:01:02.248513', '2019-02-27 04:01:02.248513'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-02-27 04:01:02.248513', '2019-02-27 04:01:02.248513')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "active_admin_comments" DISABLE TRIGGER ALL;ALTER TABLE "admin_users" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "drinks" DISABLE TRIGGER ALL;ALTER TABLE "ingredients" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "drinks";
+DELETE FROM "ingredients";
+DELETE FROM "admin_users";
+INSERT INTO "drinks" ("id", "title", "description", "steps", "source", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', 'MyString', '2019-02-27 04:01:02.255825', '2019-02-27 04:01:02.255825'), (298486374, 'MyString', 'MyString', 'MyString', 'MyString', '2019-02-27 04:01:02.255825', '2019-02-27 04:01:02.255825');
+INSERT INTO "ingredients" ("id", "drink_id", "description", "created_at", "updated_at") VALUES (980190962, 980190962, 'MyString', '2019-02-27 04:01:02.256985', '2019-02-27 04:01:02.256985'), (298486374, 298486374, 'MyString', '2019-02-27 04:01:02.256985', '2019-02-27 04:01:02.256985');
+INSERT INTO "admin_users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-02-27 04:01:02.257848', '2019-02-27 04:01:02.257848'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-02-27 04:01:02.257848', '2019-02-27 04:01:02.257848')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "active_admin_comments" DISABLE TRIGGER ALL;ALTER TABLE "admin_users" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "drinks" DISABLE TRIGGER ALL;ALTER TABLE "ingredients" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "drinks";
+DELETE FROM "ingredients";
+DELETE FROM "admin_users";
+INSERT INTO "drinks" ("id", "title", "description", "steps", "source", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', 'MyString', '2019-02-27 04:01:02.264412', '2019-02-27 04:01:02.264412'), (298486374, 'MyString', 'MyString', 'MyString', 'MyString', '2019-02-27 04:01:02.264412', '2019-02-27 04:01:02.264412');
+INSERT INTO "ingredients" ("id", "drink_id", "description", "created_at", "updated_at") VALUES (980190962, 980190962, 'MyString', '2019-02-27 04:01:02.265543', '2019-02-27 04:01:02.265543'), (298486374, 298486374, 'MyString', '2019-02-27 04:01:02.265543', '2019-02-27 04:01:02.265543');
+INSERT INTO "admin_users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-02-27 04:01:02.266595', '2019-02-27 04:01:02.266595'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-02-27 04:01:02.266595', '2019-02-27 04:01:02.266595')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "active_admin_comments" DISABLE TRIGGER ALL;ALTER TABLE "admin_users" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "drinks" DISABLE TRIGGER ALL;ALTER TABLE "ingredients" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "drinks";
+DELETE FROM "ingredients";
+DELETE FROM "admin_users";
+INSERT INTO "drinks" ("id", "title", "description", "steps", "source", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', 'MyString', '2019-02-27 04:01:02.273877', '2019-02-27 04:01:02.273877'), (298486374, 'MyString', 'MyString', 'MyString', 'MyString', '2019-02-27 04:01:02.273877', '2019-02-27 04:01:02.273877');
+INSERT INTO "ingredients" ("id", "drink_id", "description", "created_at", "updated_at") VALUES (980190962, 980190962, 'MyString', '2019-02-27 04:01:02.275070', '2019-02-27 04:01:02.275070'), (298486374, 298486374, 'MyString', '2019-02-27 04:01:02.275070', '2019-02-27 04:01:02.275070');
+INSERT INTO "admin_users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-02-27 04:01:02.276163', '2019-02-27 04:01:02.276163'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-02-27 04:01:02.276163', '2019-02-27 04:01:02.276163')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
